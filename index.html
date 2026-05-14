@@ -3,60 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dua Tombol Link</title>
+    <title>Pink Aesthetic</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 60px 50px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
         .btn {
             display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            font-weight: bold;
+            padding: 16px 40px;
+            margin: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
         }
-        
+
         .btn1 {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
             color: white;
-            border: 2px solid #007bff;
+            border: 2px solid #fff;
         }
-        
+
         .btn1:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 20, 147, 0.5);
         }
-        
+
         .btn2 {
-            background-color: #28a745;
+            background: linear-gradient(45deg, #ff8fab, #ff4d94);
             color: white;
-            border: 2px solid #28a745;
+            border: 2px solid #fff;
         }
-        
+
         .btn2:hover {
-            background-color: #218838;
-            transform: translateY(-3px);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 77, 148, 0.5);
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            animation: float 6s infinite ease-in-out;
         }
     </style>
 </head>
 <body>
 
-    <h2>Contoh 2 Tombol Link</h2>
-    
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScmO8kQxlm_c72olNKeeAf1OftPOIzZsJ1-cMi2LKXw9w0iQw/viewform?usp=publish-editor" class="btn btn1" target="_blank">
-        Google Form
-    </a>
-    
-    <a href="https://datastudio.google.com/reporting/52de5670-318e-4494-bc29-ab4498394216" class="btn btn2" target="_blank">
-        Sajian Data
-    </a>
+    <div class="container">
+        <h1> ✨</h1>
+        <p>Tugas 3</p>
+        
+        <a href="https://google.com" class="btn btn1" target="_blank">
+            Google Form
+        </a>
+        
+        <a href="https://youtube.com" class="btn btn2" target="_blank">
+            Sajian Data
+        </a>
+    </div>
+
+    <script>
+        // Tambah hati kecil melayang (opsional)
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '♡';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-50px';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
 
 </body>
 </html>
